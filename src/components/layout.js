@@ -1,11 +1,11 @@
 import * as React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
-import Navigation from './navigation';
+import {useStaticQuery, graphql} from 'gatsby';
+import Navigation from './Navigation';
 
-import { container, heading, siteTitle } from './layout.module.css';
+import {container, heading, siteTitle} from './layout.module.css';
 
-const Layout = ({ pageTitle, children }) => {
-  const data = useStaticQuery(graphql`
+const Layout = ({pageTitle, children}) => {
+  const data = useStaticQuery (graphql`
     query {
       site {
         siteMetadata {

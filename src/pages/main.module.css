@@ -109,6 +109,8 @@ body {
   margin: 0;
   padding: 0;
   background: var(--background-color);
+  /* overflow: hidden; */
+  overflow-y: scroll;
 }
 
 a {

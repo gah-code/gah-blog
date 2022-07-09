@@ -5,9 +5,15 @@
   margin-right: auto;
 }
 
-@media screen and (min-width: 44em) {
+@media screen and (max-width: 44em) {
   .container {
     padding: 0 4rem;
+  }
+}
+
+@media screen and (max-width: 34em) {
+  .container {
+    padding: 0 3rem;
   }
 }
 
