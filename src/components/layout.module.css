@@ -13,7 +13,7 @@
 
 @media screen and (max-width: 34em) {
   .container {
-    padding: 0 3rem;
+    padding: 0 2.5rem;
   }
 }
 
@@ -30,5 +30,5 @@
 }
 
 .page-title {
-  color: var(--green-5);
+  color: var(--green-2);
 }
