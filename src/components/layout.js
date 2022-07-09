@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {useStaticQuery, graphql} from 'gatsby';
-import Navigation from './Navigation';
+import Navigation from './navigation';
 
 import {container, heading, siteTitle} from './layout.module.css';
 
