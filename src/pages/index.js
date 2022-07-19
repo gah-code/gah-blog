@@ -1,26 +1,41 @@
 import * as React from 'react';
-import Layout from '../components/layout';
-import {StaticImage} from 'gatsby-plugin-image';
+import Helmet from 'react-helmet';
 
-import {heroDescription, profileImg} from './main.module.css';
+import Layout from '../components/Layout';
+// import Navigation from '../components/Navigation';
+import {SEO} from '../components/SEO';
+// import { Heading } from '../components/Heading';
+import Hero from '../components/Hero';
 
-const IndexPage = () => {
+import config from '../utils/config';
+// import { slugify } from '../utils/helpers';
+
+const IndexPage = ({data}) => {
   return (
-    <Layout pageTitle="Hi, I'm Gilbert">
-      <p className={heroDescription}>
-        I'm a Web Developer, who creates open-source projects. I like photography, working out and burritos.
-        {' '}
-        <br />
-        <br />
-        This is my digtial Playground
-      </p>
-      <StaticImage
-        className={profileImg}
-        alt="Clifford, a reddish-brown pitbull, dozing in a bean bag chair"
-        src="../../images/profile.jpg"
-      />
-    </Layout>
+    <div>
+      {/* <Layout /> */}
+      {/* <Helmet title={config.siteTitle} />
+      <SEO /> */}
+
+      <div className="container">
+        <div className="hero-wrapper">
+          <Hero title="Hi, I'm Gilbert" index>
+            <p className="hero-description small width">
+              I'm a Web Developer, who creates open-source projects. I like
+              photography, yoga and burritos. <br />
+              <br />
+              This is where I code things 👾
+            </p>
+          </Hero>
+        </div>
+      </div>
+    </div>
   );
 };
 
+IndexPage.Layout = Layout;
 export default IndexPage;
+
+// export default IndexPage;
+
+// Index.Layout = Layout;

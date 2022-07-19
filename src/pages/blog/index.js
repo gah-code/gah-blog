@@ -1,15 +1,16 @@
 import * as React from 'react';
 import {Link, graphql} from 'gatsby';
-import Layout from '../../components/layout';
 
-import {blogHeading} from '../main.module.css';
+import Layout from '../../components/Layout';
 
-const BlogPage = ({data}) => {
+// import {blogHeading} from '../main.module.css';
+
+export default function Blog({data}) {
   return (
     <Layout pageTitle="My Blog Posts">
       {data.allMdx.nodes.map (node => (
         <article key={node.id}>
-          <h2 className={blogHeading}>
+          <h2>
             <Link to={`/blog/${node.slug}`}>
               {node.frontmatter.title}
             </Link>
@@ -19,7 +20,7 @@ const BlogPage = ({data}) => {
       ))}
     </Layout>
   );
-};
+}
 
 export const query = graphql`
   query {
@@ -36,4 +37,5 @@ export const query = graphql`
   }
 `;
 
-export default BlogPage;
+Blog.Layout = Layout;
+// export default BlogPage;

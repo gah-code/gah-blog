@@ -7,14 +7,8 @@ module.exports = {
     'gatsby-plugin-netlify-cms',
     'gatsby-plugin-image',
     'gatsby-plugin-sharp',
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'pages',
-        path: './src/pages/',
-      },
-      __key: 'pages',
-    },
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-mdx',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
