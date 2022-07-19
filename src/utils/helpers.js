@@ -1,3 +1,9 @@
+export function getSimplifiedPosts (posts, options = {}) {
+  return posts.map (post => ({
+    id: post.node.id,
+  }));
+}
+
 export function slugify (string) {
   return (
     string &&

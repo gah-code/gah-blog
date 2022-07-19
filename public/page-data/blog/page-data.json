@@ -1,1 +1,1 @@
-{"componentChunkName":"component---src-pages-blog-index-js","path":"/blog/","result":{"data":{"allMdx":{"nodes":[{"frontmatter":{"date":"July 9, 2022","title":"Design Theory"},"id":"1156b220-10f5-5b90-98de-99fd7b83279c","slug":"design-theory/"},{"frontmatter":{"date":"July 9, 2022","title":"Project Plan"},"id":"722bc588-4888-5469-bd7e-aa7c5406151f","slug":"project-plan/"}]}},"pageContext":{}},"staticQueryHashes":[]}
+{"componentChunkName":"component---src-pages-blog-js","path":"/blog/","result":{"pageContext":{}},"staticQueryHashes":[]}
