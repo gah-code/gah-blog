@@ -6,7 +6,8 @@ import '../styles/style.css';
 // import '../styles/new-moon.css';
 
 // const Layout = ({pageTitle, children}) => {
-const Layout = ({children, pageTitle}) => {
+// NOTE: Export as component
+export const Layout = ({children, pageTitle}) => {
   return (
     <div>
 
@@ -26,4 +27,4 @@ const Layout = ({children, pageTitle}) => {
 //   children: PropTypes.node.isRequired,
 // };
 
-export default Layout;
+// export default Layout;

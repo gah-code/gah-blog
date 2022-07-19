@@ -4,7 +4,7 @@ import Helmet from 'react-helmet';
 
 import config from '../../utils/config';
 
-import Layout from '../../components/Layout';
+import {Layout} from '../../components/Layout';
 
 // import {blogHeading} from '../main.module.css';
 
