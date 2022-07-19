@@ -10,7 +10,7 @@ import Hero from '../components/Hero';
 import config from '../utils/config';
 // import { slugify } from '../utils/helpers';
 
-const IndexPage = ({data}) => {
+export default function IndexPage({data}) {
   return (
     <div>
       {/* <Layout /> */}
@@ -31,11 +31,8 @@ const IndexPage = ({data}) => {
       </div>
     </div>
   );
-};
-
-IndexPage.Layout = Layout;
-export default IndexPage;
+}
 
 // export default IndexPage;
-
+IndexPage.Layout = Layout;
 // Index.Layout = Layout;

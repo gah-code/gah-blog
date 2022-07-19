@@ -1,37 +1,37 @@
-import React, {Link} from 'react';
-import Helmet from 'react-helmet';
+// import React, {Link} from 'react';
+// import Helmet from 'react-helmet';
 
-import Layout from '../components/Layout';
-import {SEO} from '../components/SEO';
+// import {Layout} from '../components/Layout';
+// import {SEO} from '../components/SEO';
 
-import {getSimplifiedPosts} from '../utils/helpers';
+// import {getSimplifiedPosts} from '../utils/helpers';
 
-import config from '../utils/config';
+// import config from '../utils/config';
 
-export default function Blog({data}) {
-  // const posts = data.posts.edges;
-  // const simplifiedPosts = useMemo (() => getSimplifiedPosts (posts), [posts]);
-  const title = 'Writing';
-  const description = 'Notes & tutorials';
+// export default function Blog({data}) {
+//   // const posts = data.posts.edges;
+//   // const simplifiedPosts = useMemo (() => getSimplifiedPosts (posts), [posts]);
+//   const title = 'Writing';
+//   const description = 'Notes & tutorials';
 
-  <SEO customDescription={description} />;
+//   <SEO customDescription={description} />;
 
-  return (
-    <Layout>
-      <div className="container">
-        <Helmet title={`${title} | ${config.siteTitle}`} />
-        <h1>Blogs</h1>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nulla.
-        </p>
+//   return (
+//     <Layout>
+//       <div className="container">
+//         <Helmet title={`${title} | ${config.siteTitle}`} />
+//         <h1>Blogs</h1>
+//         <p>
+//           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nulla.
+//         </p>
 
-        <header className="hero">
-          <h1>{title}</h1>
-        </header>
+//         <header className="hero">
+//           <h1>{title}</h1>
+//         </header>
 
-      </div>
-    </Layout>
-  );
-}
+//       </div>
+//     </Layout>
+//   );
+// }
 
-Blog.Layout = Layout;
+// Blog.Layout = Layout;
