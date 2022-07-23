@@ -1,0 +1,327 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+:root {
+  /* COLORS  */
+  /* primary */
+  --primary-0: #f0efff;
+  --primary-50: #d8d6ff;
+  --primary-100: #c1beff;
+  --primary-200: #aaa5ff;
+  --primary-300: #938dff;
+  --primary-400: #7b74ff;
+  /* main */
+  --primary-500: #645cff;
+  --primary-600: #554ed9;
+  --primary-700: #4640b3;
+  --primary-800: #37338c;
+  --primary-900: #282566;
+  --primary-1000: #191740;
+  --primary-1100: #0a0919;
+  /* grey */
+  --gray-0: #f8f9fa;
+  --gray-05: #f3f6f9;
+  --gray-1: #f1f3f5;
+  --gray-2: #e9ecef;
+  --gray-3: #dee2e6;
+  --gray-4: #ced4da;
+  --gray-5: #adb5bd;
+  --gray-6: #868e96;
+  --gray-7: #4b5056;
+  --gray-8: #31363b;
+  --gray-9: #212529;
+
+  --black: #222;
+  --white: #fff;
+
+  --green: #51b681;
+  --green-1: #95cd7f;
+  --green-2: #73b18a;
+  --green-3: #4d8994;
+  --green-4: #30619d;
+  --green-5: #30379d;
+
+  --red: #f34646;
+  --red-1: #efcf4a;
+  --red-2: #e0a944;
+  --red-3: #d37d36;
+  --red-4: #cd583c;
+  --red-5: #ab2e3f;
+
+  --indigo: #5a43f1;
+  --indigo-dark: #4509cf;
+  --indigo-light: #969bf6;
+  --indigo-muted: #f1f2fd;
+
+  /* typography */
+  --defaultFontSize: 87.5%;
+  --bodyFont: 'Montserrat', sans-serif;
+  --smallText: 0.8em;
+  --extraSmallText: 0.7em;
+  /* Font family */
+  --font-family-base: 'Inter', -apple-system, BlinkMacSystemFont,
+    'Helvetica Neue', Arial, sans-serif;
+  --font-family-monospace: 'IBM Plex Mono', Menlo, monospace;
+  --font-family-heading: 'Merriweather', -apple-system, BlinkMacSystemFont,
+    'Helvetica Neue', Arial, sans-serif;
+
+  /* Font color */
+  --font-color-base: var(--gray-7);
+  --font-color-muted: var(--gray-5);
+  --font-color-heading: var(--gray-05);
+  --font-color-bright: var(--gray-9);
+  --font-color-hero-heading: var(--gray-0);
+
+  /* Borders */
+  --border-color: var(--gray-3);
+  --border-color-hover: var(--gray-6);
+  --border-radius: 4px;
+
+  /* Elements */
+  --background-color: #33394bfb;
+  --card-background-color: var(--gray-05);
+  --button-background-color: white;
+  --marker: var(--blue-2);
+  --link: var(--indigo);
+  --link-hover-color: var(--indigo-muted);
+  --navbar: rgb(33, 39, 54);
+
+  /* rest */
+
+  --borderRadius: 0.25rem;
+  --letterSpacing: 1px;
+  --transition: 0.3s ease-in-out all;
+  --max-width: 1120px;
+  --fixed-width: 600px;
+
+  --shadow-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --shadow-2: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-3: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+  /* Sizs */
+  --content-width: 1160px;
+  --content-width--small: 550px;
+  --content-width--medium: 700px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--font-family-base);
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.6;
+  font-size: 16px;
+  font-weight: normal;
+  font-kerning: normal;
+}
+
+@media only screen and (min-width: 576px) {
+  :root {
+    --defaultFontSize: 100%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  :root {
+    --defaultFontSize: 112.5%;
+  }
+}
+
+body {
+  background: var(--background-color);
+  overflow-y: scroll;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+}
+
+p,
+ul,
+ol,
+ul,
+table,
+blockquote {
+  color: var(--font-color-muted);
+}
+
+ul {
+  padding-left: 1.5rem;
+}
+
+ul li ul,
+ol li ol {
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+}
+
+li {
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+  padding-left: 0.25rem;
+}
+
+li::marker {
+  font-size: 1.1rem;
+  line-height: 1;
+  color: var(--marker);
+}
+
+main {
+  margin-top: 60px;
+}
+
+/* Blockquote */
+
+blockquote {
+  margin: 1.5rem 0;
+  border-left: 4px solid var(--indigo-light);
+  margin-left: 0;
+  padding: 1rem;
+  background: var(--blockquote-background);
+  border-radius: var(--border-radius);
+}
+
+blockquote p {
+  font-size: 1rem;
+  line-height: 1.7;
+  font-weight: 400;
+}
+
+blockquote p:last-of-type {
+  margin: 0;
+}
+
+/* Headings */
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: var(--font-color-hero-heading);
+  /* color: var(--font-color-heading); */
+  line-height: 1.1;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  scroll-margin-top: 80px;
+}
+
+h1:not(:first-child),
+h2:not(:first-child),
+h3:not(:first-child),
+h4:not(:first-child) {
+  margin-top: 3rem;
+}
+
+h2 + h3 {
+  margin-top: 1.5rem !important;
+}
+
+h2 {
+  font-size: 2rem;
+  margin: 0 0 1rem;
+  font-weight: 700;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--font-color-heading);
+  letter-spacing: -0.03rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  color: var(--font-color-muted);
+  font-family: var(--font-family-heading);
+}
+
+h4,
+h4 code {
+  color: var(--font-color-heading);
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+h5 {
+  color: var(--font-color-heading);
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: -0.02rem;
+  font-family: var(--font-family-heading);
+}
+
+.container nav:not(:first-child) {
+  max-width: var(--content-width);
+  padding: 0 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.page {
+  width: 90vw;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+.page {
+  min-height: calc(100vh - (6rem + 4rem));
+}
+
+header {
+  width: 95vw;
+  padding: 4rem 0;
+  margin: 0 auto;
+}
+
+h2.home-heading {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 0;
+  padding: 0;
+}
+
+h2.home-heading .title {
+  font-size: 1.4rem;
+  margin-bottom: 0.75rem;
+  font-family: var(--font-family-base);
+  font-weight: 700;
+  letter-spacing: -0.03rem;
+}
+
+/*#########*/
+/* Navbar */
+/*#########*/
+nav.navbar {
+  background: var(--navbar);
+  display: flex;
+  justify-content: space-around;
+}
+.nav-center {
+  width: 90vw;
+  max-width: var(--max-width);
+}
+.nav-header {
+  height: 4.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

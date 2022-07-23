@@ -1,30 +1,9 @@
 import React from 'react';
-// import french79 from '../assets/french79-logo.png';
-import {Navigation} from './Navigation';
 
-import '../styles/style.css';
-// import '../styles/new-moon.css';
+import '../assets/css/styles.css';
 
-// const Layout = ({pageTitle, children}) => {
-// NOTE: Export as component
-export const Layout = ({children, pageTitle}) => {
-  return (
-    <div>
-
-      <div className="layout" id="layout">
-        <Navigation />
-        <main>
-          {children}
-        </main>
-
-      </div>
-    </div>
-  );
+const Layout = ({ children }) => {
+  return <div className='container'>{children}</div>;
 };
 
-// export default Layout;
-// Layout.propTypes = {
-//   children: PropTypes.node.isRequired,
-// };
-
-// export default Layout;
+export default Layout;
