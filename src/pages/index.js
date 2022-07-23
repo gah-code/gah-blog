@@ -6,22 +6,6 @@ import { Link } from 'gatsby';
 export default function Home() {
   return (
     <Layout>
-      <nav className='navbar'>
-        <div className='nav-center'>
-          <div className='nav-header'>
-            <Link to='/'>
-              <h5 className='logo'>Coding things ...</h5>
-            </Link>
-            <button>Btn</button>
-          </div>
-          {/* <Link to='/about'>
-              <p>about</p>
-            </Link>
-            <Link to='/'>
-              <p>projects</p>
-            </Link> */}
-        </div>
-      </nav>
       <main className='page'>
         <header>
           <div className='text-box'>
