@@ -4,7 +4,12 @@ import Layout from '../components/layout';
 const About = () => {
   return (
     <Layout>
-      <h2>Hello from the about page!</h2>
+      <div className='container'>
+        <div className='about'>
+          <h2>About page</h2>
+          <p>coming soon</p>
+        </div>
+      </div>
     </Layout>
   );
 };

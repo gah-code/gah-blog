@@ -1,50 +1,74 @@
 import React, { useState } from 'react';
 import { Link } from 'gatsby';
-import { HiMenuAlt2 } from 'react-icons/hi';
 
 import logo from '../assets/french79-logo.png';
+import blog from '../assets/nav-blog.png';
+import github from '../assets/nav-github.png';
+
+function slugify(string) {
+  return (
+    string &&
+    `${string}`
+      .match(
+        /[A-Z]{2,}(?=[A-Z][a-z]+[0-9]*|\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+/g
+      )
+      .map((x) => x.toLowerCase())
+      .join('-')
+  );
+}
+
+const mainNavItems = [
+  { url: '/about', icon: blog, label: 'About me' },
+  { url: '/projects', icon: blog, label: 'Projects' },
+];
+
+const socialNavItems = [
+  { url: 'https://github.com/gah-code', icon: github, label: 'GitHub' },
+];
 
 const Navbar = () => {
   const [show, setShow] = useState(false);
   return (
-    <nav className='navbar'>
-      <div className='nav-center'>
-        <div className='nav-header'>
-          <Link to='/'>
-            <h5>Coding things ...</h5>
-          </Link>
-          <button className='nav-btn' onClick={() => setShow(!show)}>
-            {/* <HiMenuAlt2 /> */}
-            <img src={logo} alt='French79' />
-          </button>
-        </div>
-
-        <div className={show ? 'nav-links show-links' : 'nav-links'}>
-          <Link
-            to='/about'
-            className='nav-link'
-            activeClassName='active-link'
-            onClick={() => setShow(false)}
-          >
-            about
-          </Link>
-          <Link
-            to='/projects'
-            className='nav-link'
-            activeClassName='active-link'
-            onClick={() => setShow(false)}
-          >
-            projects
+    <section className='navigation'>
+      <div className='container'>
+        <nav>
+          <Link to='/' className='item brand'>
+            <img src={logo} className='logo' alt='' />
+            <span>Gilbert A Haro</span>
           </Link>
 
-          <div className='nav-link contact-link'>
-            <Link to='/' className='btn' onClick={() => setShow(false)}>
-              contact
-            </Link>
-          </div>
-        </div>
+          {mainNavItems.map((item) => (
+            <div className='nav-item-outer'>
+              <img src={item.icon} alt={item.label} className='nav-image' />
+              <Link
+                to={item.url}
+                key={item.label}
+                activeClassName='active'
+                className={`item ${slugify(item.label)}`}
+              >
+                <span>{item.label}</span>
+              </Link>
+            </div>
+          ))}
+
+          {socialNavItems.map((item) => (
+            <div className='nav-item-outer'>
+              <img src={item.icon} alt={item.label} className='nav-image' />
+              <a
+                href={item.url}
+                key={item.label}
+                className={`desktop-only item ${slugify(item.label)}`}
+                target='_blank'
+                rel='noreferrer'
+              >
+                <span>{item.label}</span>
+                {/* <ExternalLinkIcon /> */}
+              </a>
+            </div>
+          ))}
+        </nav>
       </div>
-    </nav>
+    </section>
   );
 };
 
