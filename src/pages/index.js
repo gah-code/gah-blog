@@ -22,13 +22,17 @@ export default function Home() {
 
           <figure class='card'>
             <div class='card__hero'>
-              {/* <img src="https://images.unsplash.com/photo-1474600056930-615c3d706456?ixlib=rb-0.3.5&s=dc82336ad3e3873b0a81e9389d346916&auto=format&fit=crop&w=1952&q=80" alt="Pizza" class="pizza__img"> */}
+              <img
+                src='https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80'
+                alt='Pizza'
+                className='card__img'
+              />
             </div>
             <div class='card__content'>
               <div class='card__title'>
                 <h1 class='card__heading'>Project Workflow</h1>
                 <div class='card__tag card__tag--1'>#components</div>
-                <div class='card__tag card__tag--2'>#UI/UX</div>
+                <div class='card__tag card__tag--2'>#UI</div>
               </div>
               <p class='card__description'>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus,
@@ -36,10 +40,10 @@ export default function Home() {
               </p>
               <div class='card__details'>
                 <p class='card__detail'>
-                  <span class='emoji'>🍕</span> Brain food
+                  <span class='emoji'>💻</span> Web Dev
                 </p>
                 <p class='card__detail'>
-                  <span class='emoji'></span>30 min
+                  <span class='emoji'>⏳</span>20 min read
                 </p>
                 {/* <p class='card__detail'>
                   <span class='emoji'></span>4.7 / 5
